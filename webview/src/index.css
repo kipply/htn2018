@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+html {
+  background: repeating-linear-gradient(
+    45deg,
+    #c1d9ff,
+    #c1d9ff 50px,
+    #eff5ff 50px,
+    #eff5ff 100px
+  );
+  height: 100%;
+}

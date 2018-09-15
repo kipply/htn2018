@@ -1,6 +1,10 @@
 const functions = require('firebase-functions');
 const admin = require("firebase-admin");
 var serviceAccount = require("./serviceAccountKey.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://banana-a5779.firebaseio.com/"
+});
 const SpellChecker = require('spellchecker');
 const request = require('request');
 
@@ -34,10 +38,6 @@ exports.main = functions.https.onRequest((req, res) => {
   )
 
   // Store on firebase
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://banana-a5779.firebaseio.com/"
-  });
   var db = admin.database();
   var ref = db.ref("hackthenorth");
   const fb = ref.push().set({
