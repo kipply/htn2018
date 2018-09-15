@@ -1,0 +1,26 @@
+{
+  "name": "htn18",
+  "description": "HTN 18 server",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "@slack/client": "^4.6.0",
+    "firebase-admin": "~5.10.0",
+    "firebase-functions": "^0.9.0",
+    "request": "^2.88.0",
+    "slackbots": "^1.1.0",
+    "spellchecker": "^3.5.0",
+    "twilio": "^3.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
